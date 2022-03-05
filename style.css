@@ -1,0 +1,249 @@
+body {
+  font-family: 'Khula', sans-serif;
+  width: 70%;
+  margin: auto;
+}
+
+body p {
+  margin: 0;
+  padding: 0;
+}
+
+body a {
+  text-decoration: none;
+}
+
+body h2 {
+  font-size: 40px;
+  margin: 0;
+  padding: 0;
+  margin-top: 30px;
+}
+
+body h3 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+header img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#menu a {
+  font-size: 30px;
+  margin-right: 16px;
+  text-decoration: none;
+  color: black;
+}
+
+#news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#news img {
+  width: 320px;
+  height: 180px;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 4px #afafaf;
+          box-shadow: 2px 2px 4px #afafaf;
+}
+
+#about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#about #about-box {
+  margin-right: 10px;
+}
+
+#about #timeline {
+  float: right;
+}
+
+#member {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#member img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+#member #member-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 30px 30px 0;
+  background-color: rgba(183, 235, 255, 0.3);
+  width: 300px;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 4px #afafaf;
+          box-shadow: 2px 2px 4px #afafaf;
+}
+
+#member #member-box img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+#member #member-box #profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+}
+
+#member #member-box #profile #name {
+  font-size: 20px;
+  color: black;
+}
+
+#member #member-box #profile #detail {
+  font-size: 12px;
+  color: #464646;
+}
+
+#member #member-box #profile #sns {
+  text-align: right;
+  font-size: 20px;
+}
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-player__playing {
+  margin-bottom: 1.000em;
+}
+
+.video-player__thumbs {
+  overflow: hidden;
+}
+
+.video-thumb {
+  float: left;
+  width: 23.5%;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 13%;
+  margin-bottom: 0.375em;
+  cursor: pointer;
+}
+
+.video-thumb img {
+  max-width: 100%;
+  height: auto;
+}
+
+.video-thumb:not(:last-child) {
+  margin-right: 1.5%;
+}
+
+.video-thumb.active {
+  cursor: default;
+}
+
+.video-thumb:before,
+.video-thumb:after {
+  display: block;
+  position: absolute;
+  -webkit-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
+  z-index: 1;
+}
+
+.video-thumb:before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(247, 148, 30, 0);
+}
+
+.video-thumb.active:before {
+  background: rgba(30, 247, 236, 0.75);
+}
+
+.video-thumb:not(.active):hover:before {
+  background: rgba(30, 247, 236, 0.3);
+}
+
+.video-thumb:after {
+  content: "\00266b";
+  font-family: "FontAwesome";
+  top: 50%;
+  left: 50%;
+  margin: -0.458em 0 0 -0.500em;
+  color: rgba(255, 255, 255, 0);
+  font-size: 3.000em;
+  line-height: 1;
+}
+
+.video-thumb.active:after {
+  color: white;
+  font-size: 30px;
+}
+
+.video-thumb img {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
