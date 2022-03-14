@@ -307,7 +307,7 @@ header img {
     width: 100%;
   }
   .sp-body {
-    margin: 0 40px;
+    margin: 0 30px;
   }
   #news {
     overflow-x: scroll;
@@ -325,6 +325,9 @@ header img {
   }
   #about .twitter-pc {
     display: none;
+  }
+  .twitter-sp {
+    display: block !important;
   }
   #member {
     -webkit-box-pack: center;
