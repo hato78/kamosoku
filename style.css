@@ -240,11 +240,11 @@ header img {
 }
 
 .video-thumb.active:before {
-  background: rgba(30, 247, 236, 0.75);
+  background: rgba(25, 209, 255, 0.856);
 }
 
 .video-thumb:not(.active):hover:before {
-  background: rgba(30, 247, 236, 0.3);
+  background: rgba(25, 209, 255, 0.637);
 }
 
 .video-thumb:after {
@@ -307,7 +307,8 @@ header img {
     width: 100%;
   }
   .sp-body {
-    margin: 0 40px;
+    overflow: hidden;
+    padding: 20px;
   }
   #news {
     overflow-x: scroll;
@@ -316,6 +317,17 @@ header img {
     width: 256px;
     height: 144px;
     margin-right: 10px;
+  }
+  #songs-top {
+    background-color: rgba(25, 209, 255, 0.637);
+    color: white;
+    padding-top: 10px;
+    margin: 0 -20px;
+  }
+  #songs {
+    background-color: rgba(25, 209, 255, 0.637);
+    padding-bottom: 30px;
+    margin: 0 -20px;
   }
   #about {
     -webkit-box-orient: vertical;
@@ -328,6 +340,7 @@ header img {
   }
   .twitter-sp {
     display: block !important;
+    margin: 0 -20px;
   }
   #member {
     -webkit-box-pack: center;
