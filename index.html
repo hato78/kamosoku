@@ -6,22 +6,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    
+
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
     <script src="https://unpkg.com/vue-scrollto"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <link href="https://fonts.googleapis.com/css2?family=Khula:wght@800&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-</head>
-
-
 <body>
     <div id="app">
         <header>
             <h1>
                 <img src="banner.png" alt="鴨川即興演奏同好会かもそく">
             </h1>
-            <div id="menu" class="sp-body">
+            <div id="menu" class="sp-body fade-menu">
                 <a v-scroll-to="'#about-top'" href="">Biography</a><a v-scroll-to="'#member-top'" href="">member</a><a
                     v-scroll-to="'#songs-top'" href="">Discography</a><a href="" target="_blank">Blog<i
                         style="font-size:14px;" class="fas fa-external-link-alt"></i></a><a target="_blank"
@@ -67,7 +67,7 @@
             <div id="member">
                 <!--TwitterのURL-->
                 <a href="">
-                    <div id="member-box">
+                    <div id="member-box" class="fade-member">
                         <!--アイコン画像-->
                         <img src="https://animeanime.jp/imgs/p/jtKDOVlKAvjRrNw8SXAVejagI61Nrq_oqaqr/303592.jpg">
                         <div id="profile">
@@ -237,4 +237,5 @@
             <p style="text-align:right;"class="copy">© 2022 kamosoku</p>
         </div>
         <script src="scroll.js"></script>
+        <script src="fade.js"></script>
 </body>
