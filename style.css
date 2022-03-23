@@ -27,6 +27,76 @@ body h3 {
   padding: 0;
 }
 
+.top-enter-active, .top-leave-active {
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  -webkit-transition: -webkit-transform 400ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  transition: -webkit-transform 400ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  transition: transform 400ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  transition: transform 400ms cubic-bezier(0, 0, 0.2, 1) 0ms, -webkit-transform 400ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.top-enter, .top-leave-to {
+  -webkit-transform: translateY(-100vh) translateX(0px);
+          transform: translateY(-100vh) translateX(0px);
+}
+
+.side-enter-active, .side-leave-active {
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  -webkit-transition: -webkit-transform 800ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  transition: -webkit-transform 800ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  transition: transform 800ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  transition: transform 800ms cubic-bezier(0, 0, 0.2, 1) 0ms, -webkit-transform 800ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.side-enter, .side-leave-to {
+  -webkit-transform: translateX(-100vh) translateY(0px);
+          transform: translateX(-100vh) translateY(0px);
+}
+
+.opa1-enter-active, .opa1-leave-active {
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.opa1-enter, .opa1-leave-to {
+  -webkit-transform: translateY(10vh) translateX(0px);
+          transform: translateY(10vh) translateX(0px);
+  opacity: 0;
+}
+
+.opa2-enter-active, .opa2-leave-active {
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
+  -webkit-transition: all 1.7s;
+  transition: all 1.7s;
+}
+
+.opa2-enter, .opa2-leave-to {
+  -webkit-transform: translateY(10vh) translateX(0px);
+          transform: translateY(10vh) translateX(0px);
+  opacity: 0;
+}
+
+.opa3-enter-active, .opa3-leave-active {
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
+  -webkit-transition: all 2.2s;
+  transition: all 2.2s;
+}
+
+.opa3-enter, .opa3-leave-to {
+  -webkit-transform: translateY(10vh) translateX(0px);
+          transform: translateY(10vh) translateX(0px);
+  opacity: 0;
+}
+
 header img {
   width: 100%;
 }
