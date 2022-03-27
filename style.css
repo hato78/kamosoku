@@ -395,12 +395,19 @@ header h1 a {
   body {
     width: 100%;
   }
+  #menu a, h2 {
+    font-size: 26px !important;
+  }
+  h3 {
+    font-size: 20px !important;
+  }
   .sp-menu {
     padding-left: 20px;
   }
   .sp-body {
     overflow: hidden;
     padding: 20px;
+    font-size: 0.8rem;
   }
   #news {
     overflow-x: scroll;
