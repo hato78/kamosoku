@@ -452,5 +452,8 @@ header h1 a {
     margin-bottom: 20px !important;
     margin: auto;
   }
+  .contents {
+    width: auto !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */
