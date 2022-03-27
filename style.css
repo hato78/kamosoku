@@ -183,6 +183,10 @@ header h1 a {
   display: none !important;
 }
 
+.twitter-box {
+  display: none;
+}
+
 #member {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -360,10 +364,6 @@ header h1 a {
   left: 0;
 }
 
-.twitter-sp {
-  display: block;
-}
-
 .parallax {
   position: relative;
   background-image: url("kamogawa1.jpg");
@@ -436,6 +436,13 @@ header h1 a {
   }
   #about .twitter-pc {
     display: none;
+  }
+  .twitter-box {
+    display: block !important;
+    background-image: url("twitter.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 30px;
   }
   .twitter-sp {
     display: block !important;
