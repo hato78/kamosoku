@@ -17,15 +17,16 @@
         <header>
             <transition appear name="top">
                 <h1>
+
                     <img src="banner.png" alt="鴨川即興演奏同好会かもそく">
                 </h1>
             </transition>
             <transition appear name="side">
-                <div id="menu">
+                <div id="menu" class="sp-menu">
                     <a v-scroll-to="'#about-top'" href="">Biography</a><a v-scroll-to="'#member-top'"
-                        href="">member</a><a v-scroll-to="'#songs-top'" href="">Discography</a><a href=""
-                        target="_blank">Blog<i style="font-size:14px;" class="fas fa-external-link-alt"></i></a><a
-                        target="_blank" href="https://twitter.com/KamoSoku_KIC"><i style="color:#1DA1F2;"
+                        href="">Member</a><a v-scroll-to="'#songs-top'" href="">Discography</a><a href=""
+                        target="_blank">Blog<i style="font-size:14px;" class="fas fa-external-link-alt"></i></a>
+                    <a target="_blank" href="https://twitter.com/KamoSoku_KIC"><i style="color:#1DA1F2;"
                             class="fab fa-twitter"></i></a><a target="_blank"
                         href="https://www.youtube.com/channel/UC9LY1HfZ2E3t-w1PZ7gmPNw"><i style="color:#DA1725;"
                             class="fab fa-youtube"></i></a>
@@ -202,49 +203,55 @@
                     </div>
                 </div>
             </div>
-            <div id="timeline" class="twitter-sp">
-                <a class="twitter-timeline" data-height="500px" data-theme="dark"
-                    href="https://twitter.com/KamoSoku_KIC?ref_src=twsrc%5Etfw">Tweets by KamoSoku_KIC</a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
-            <script>
-                var tag = document.createElement('script');
-                tag.src = "https://www.youtube.com/iframe_api";
-                var firstScriptTag = document.getElementsByTagName('script')[0];
-                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-                var player;
-
-                function onYouTubeIframeAPIReady() {
-                    player = new YT.Player('player', {
-                        height: '315',
-                        width: '560',
-                        videoId: 'wxOQGF7CW_Q',
-                        events: {
-                            'onReady': function () {
-                                $(".video-thumb").click(function () {
-                                    var $this = $(this);
-                                    if (!$this.hasClass("active")) {
-                                        player.loadVideoById($this.attr("data-video"));
-                                        $this.addClass("active").siblings().removeClass("active");
-                                    }
-                                });
-                            }
-                        }
-                    });
-                }
-            </script>
-            <div class="parallax">
-                <div id="menu" class="contents">
-                    <a v-scroll-to="'#about-top'" href="">Biography</a><a v-scroll-to="'#member-top'"
-                        href="">member</a><a v-scroll-to="'#songs-top'" href="">Discography</a><a href=""
-                        target="_blank">Blog</a><a target="_blank" href="https://twitter.com/KamoSoku_KIC"><i
-                            class="fab fa-twitter" 　style="color:#1DA1F2;"></i></a><a target="_blank"
-                        href="https://www.youtube.com/channel/UC9LY1HfZ2E3t-w1PZ7gmPNw"><i class="fab fa-youtube"
-                            　style="color:#DA1725;"></i></a>
+            <i class="twitter-sp"
+                style="color:#1DA1F2;font-size: 50px;text-align: center;display: block;margin-top: 30px;"
+                class="fab fa-twitter"></i>
+            <div class="twitter-box">
+                <div id="timeline" class="twitter-sp">
+                    <a class="twitter-timeline" data-height="500px" data-theme="dark"
+                        href="https://twitter.com/KamoSoku_KIC?ref_src=twsrc%5Etfw">Tweets by KamoSoku_KIC</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
             </div>
-            <p style="text-align:right;" class="copy">© 2022 kamosoku</p>
         </div>
+        <!--スマホpadding20px-->
+        <script>
+            var tag = document.createElement('script');
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+            var player;
+
+            function onYouTubeIframeAPIReady() {
+                player = new YT.Player('player', {
+                    height: '315',
+                    width: '560',
+                    videoId: 'wxOQGF7CW_Q',
+                    events: {
+                        'onReady': function () {
+                            $(".video-thumb").click(function () {
+                                var $this = $(this);
+                                if (!$this.hasClass("active")) {
+                                    player.loadVideoById($this.attr("data-video"));
+                                    $this.addClass("active").siblings().removeClass("active");
+                                }
+                            });
+                        }
+                    }
+                });
+            }
+        </script>
+        <div class="parallax">
+            <div id="menu" class="contents">
+                <a v-scroll-to="'#about-top'" href="">Biography</a><a v-scroll-to="'#member-top'" href="">Member</a><a
+                    v-scroll-to="'#songs-top'" href="">Discography</a><a href="" target="_blank">Blog</a><a
+                    target="_blank" href="https://twitter.com/KamoSoku_KIC"><i class="fab fa-twitter"
+                        　style="color:#1DA1F2;"></i></a><a target="_blank"
+                    href="https://www.youtube.com/channel/UC9LY1HfZ2E3t-w1PZ7gmPNw"><i class="fab fa-youtube"
+                        　style="color:#DA1725;"></i></a>
+            </div>
+        </div>
+        <p style="text-align:right;" class="copy">© 2022 kamosoku</p>
         <script src="scroll.js"></script>
         <script src="anime.js"></script>
 </body>
