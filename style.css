@@ -183,10 +183,6 @@ header h1 a {
   display: none !important;
 }
 
-.twitter-box {
-  display: none;
-}
-
 #member {
   display: -webkit-box;
   display: -ms-flexbox;
