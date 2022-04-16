@@ -1,154 +1,257 @@
-<!DOCTYPE html>
-<html lang="ja">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Khula:wght@800&display=swap" rel="stylesheet">
 </head>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-scrollto"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <body>
-    <hedear>
-        <div class="header-image" style="background-color: white;">
-            <img src="banner.png">
-        </div>
-
-    </hedear>
     <div id="app">
-        <v-app>
-        <template>
-            <v-tabs>
-                <v-tab href="#schedule">Schedule</v-tab>
-                <v-tab href="#about">about</v-tab>
-                <v-tab href="#link">link</v-tab>
-                </v-tabs-items>
-                <v-tab-item value="schedule">
-                    <h2></h2>
-                </v-tab-item>
-                <v-tab-item value="about">
-                    aaaaaaaaaaaaaa
-                </v-tab-item>
-                <v-tab-item value="link">
-                    aaaaaaaaaaaaaa
-                </v-tab-item>
-                </v-tabs-items>
-            </v-tabs>
-        </template>
-        </v-app>
-    </div>
-    <footer style="height: 300px;background-color:white;">
-    </footer>
-    <script>
-        new Vue({
-            el: '#app',
-            vuetify: new Vuetify(),
-            data() {
-                return {
-                    headers: [
-                        {
-                            text: 'Turning',
-                            align: 'start',
-                            sortable: false,
-                            value: 'name',
-                        },
-                        { text: '6', value: '6' },
-                        { text: '5', value: '5' },
-                        { text: '4', value: '4' },
-                        { text: '3', value: '3' },
-                        { text: '2', value: '2' },
-                        { text: '1', value: '1' },
-                    ],
-                    desserts: [
-                        {
-                            name: 'Regular',
-                            6: 'E',
-                            5: 'A',
-                            4: 'D',
-                            3: 'G',
-                            2: 'B',
-                            1: 'E',
-                        },
-                        {
-                            name: 'Drop D',
-                            calories: 237,
-                            fat: 9.0,
-                            carbs: 37,
-                            protein: 4.3,
-                            iron: '1%',
-                        },
-                        {
-                            name: 'Eclair',
-                            calories: 262,
-                            fat: 16.0,
-                            carbs: 23,
-                            protein: 6.0,
-                            iron: '7%',
-                        },
-                        {
-                            name: 'Cupcake',
-                            calories: 305,
-                            fat: 3.7,
-                            carbs: 67,
-                            protein: 4.3,
-                            iron: '8%',
-                        },
-                        {
-                            name: 'Gingerbread',
-                            calories: 356,
-                            fat: 16.0,
-                            carbs: 49,
-                            protein: 3.9,
-                            iron: '16%',
-                        },
-                        {
-                            name: 'Jelly bean',
-                            calories: 375,
-                            fat: 0.0,
-                            carbs: 94,
-                            protein: 0.0,
-                            iron: '0%',
-                        },
-                        {
-                            name: 'Lollipop',
-                            calories: 392,
-                            fat: 0.2,
-                            carbs: 98,
-                            protein: 0,
-                            iron: '2%',
-                        },
-                        {
-                            name: 'Honeycomb',
-                            calories: 408,
-                            fat: 3.2,
-                            carbs: 87,
-                            protein: 6.5,
-                            iron: '45%',
-                        },
-                        {
-                            name: 'Donut',
-                            calories: 452,
-                            fat: 25.0,
-                            carbs: 51,
-                            protein: 4.9,
-                            iron: '22%',
-                        },
-                        {
-                            name: 'KitKat',
-                            calories: 518,
-                            fat: 26.0,
-                            carbs: 65,
-                            protein: 7,
-                            iron: '6%',
-                        },
-                    ],
-                }
-            },
-        })
-    </script>
-</body>
+        <header>
+            <transition appear name="top">
+                <h1>
 
-</html>
+                    <img src="banner.png" alt="鴨川即興演奏同好会かもそく">
+                </h1>
+            </transition>
+            <transition appear name="side">
+                <div id="menu" class="sp-menu">
+                    <a v-scroll-to="'#about-top'" href="">Biography</a><a v-scroll-to="'#member-top'"
+                        href="">Member</a><a v-scroll-to="'#songs-top'" href="">Discography</a><a href=""
+                        target="_blank">Blog<i style="font-size:14px;" class="fas fa-external-link-alt"></i></a>
+                    <a style="box-shadow: none;"target="_blank" href="https://twitter.com/KamoSoku_KIC"><i style="color:#1DA1F2;"
+                            class="fab fa-twitter"></i></a><a style="box-shadow: none;" target="_blank"
+                        href="https://www.youtube.com/channel/UC9LY1HfZ2E3t-w1PZ7gmPNw"><i style="color:#DA1725;"
+                            class="fab fa-youtube"></i></a>
+                </div>
+            </transition>
+        </header>
+        <div id="news">
+            <transition appear name="opa1">
+                <a href="">
+                    <!--バナー1-->
+                    <img src="https://prtimes.jp/i/31800/24/resize/d31800-24-ccc21fe2b72bc5f82b67-0.jpg">
+                </a>
+            </transition>
+            <transition appear name="opa2">
+                <a href="">
+                    <!--バナー2-->
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdcGFC1C6OK_I9XUac6zAjooGZvXXePT5crw&usqp=CAU">
+                </a>
+            </transition>
+            <transition appear name="opa3">
+                <a href="">
+                    <!--バナー3-->
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT14bKPz2sMi6LamNVBFiS--zI8DbAUWyo7CA&usqp=CAU">
+                </a>
+            </transition>
+        </div>
+        <div class="sp-body">
+            <h2 id="about-top">
+                Biography
+            </h2>
+            <div id="about">
+                <div id="about-box">
+                    <h3>かもそくとは</h3>
+                    <p>うわあああああああああああああああ<br>うわわわああああああ<br>うわあああ<br>うわあああああああああああああああああああああああああああああああああああ</p>
+                    <p>あああああああああああああああああああああ<br>ああああああああああああああああああああああああああああああああああ</p>
+                </div>
+                <div id="timeline" class="twitter-pc">
+                    <a class="twitter-timeline" data-height="500px" data-theme="dark"
+                        href="https://twitter.com/KamoSoku_KIC?ref_src=twsrc%5Etfw">Tweets by KamoSoku_KIC</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+            <h2 id="member-top">
+                Member
+            </h2>
+            <div id="member" v-scroll="handleScroll" class="scroll">
+                <!--TwitterのURL-->
+                <a href="">
+                    <div id="member-box" class="fade-member">
+                        <!--アイコン画像-->
+                        <img src="https://animeanime.jp/imgs/p/jtKDOVlKAvjRrNw8SXAVejagI61Nrq_oqaqr/303592.jpg">
+                        <div id="profile">
+                            <!--名前-->
+                            <p id="name">
+                                aaa
+                            </p>
+                            <!--プロフィール-->
+                            <p id="detail">
+                                うおおおおおおおおおおおおおおおおおおお
+                            </p>
+                            <p id="sns">
+                                <i class="fab fa-twitter"></i>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <!--TwitterのURL-->
+                <a href="">
+                    <div id="member-box">
+                        <!--アイコン画像-->
+                        <img src="https://animeanime.jp/imgs/p/jtKDOVlKAvjRrNw8SXAVejagI61Nrq_oqaqr/303592.jpg">
+                        <div id="profile">
+                            <!--名前-->
+                            <p id="name">
+                                aaa
+                            </p>
+                            <!--プロフィール-->
+                            <p id="detail">
+                                うおおおおおおおおおおおおおおおおおおお
+                            </p>
+                            <p id="sns">
+                                <i class="fab fa-twitter"></i>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <!--TwitterのURL-->
+                <a href="">
+                    <div id="member-box">
+                        <!--アイコン画像-->
+                        <img src="https://animeanime.jp/imgs/p/jtKDOVlKAvjRrNw8SXAVejagI61Nrq_oqaqr/303592.jpg">
+                        <div id="profile">
+                            <!--名前-->
+                            <p id="name">
+                                aaa
+                            </p>
+                            <!--プロフィール-->
+                            <p id="detail">
+                                うおおおおおおおおおおおおおおおおおおお
+                            </p>
+                            <p id="sns">
+                                <i class="fab fa-twitter"></i>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <!--TwitterのURL-->
+                <a href="">
+                    <div id="member-box">
+                        <!--アイコン画像-->
+                        <img src="https://animeanime.jp/imgs/p/jtKDOVlKAvjRrNw8SXAVejagI61Nrq_oqaqr/303592.jpg">
+                        <div id="profile">
+                            <!--名前-->
+                            <p id="name">
+                                aaa
+                            </p>
+                            <!--プロフィール-->
+                            <p id="detail">
+                                うおおおおおおおおおおおおおおおおおおお
+                            </p>
+                            <p id="sns">
+                                <i class="fab fa-twitter"></i>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <!--TwitterのURL-->
+                <a href="">
+                    <div id="member-box">
+                        <!--アイコン画像-->
+                        <img src="https://animeanime.jp/imgs/p/jtKDOVlKAvjRrNw8SXAVejagI61Nrq_oqaqr/303592.jpg">
+                        <div id="profile">
+                            <!--名前-->
+                            <p id="name">
+                                aaa
+                            </p>
+                            <!--プロフィール-->
+                            <p id="detail">
+                                うおおおおおおおおおおおおおおおおおおお
+                            </p>
+                            <p id="sns">
+                                <i class="fab fa-twitter"></i>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <h2 id="songs-top">
+                Discography
+            </h2>
+            <div id="songs">
+
+                <div class="container">
+                    <div class="video-player">
+                        <div class="video-player__playing">
+                            <div class="embed-container">
+                                <div id="player"></div>
+                            </div>
+                        </div>
+                        <div class="video-player__thumbs">
+                            <div data-video="wxOQGF7CW_Q" class="video-thumb active"><img
+                                    src="http://img.youtube.com/vi/wxOQGF7CW_Q/hqdefault.jpg"></div>
+                            <div data-video="QgVoITRobYs" class="video-thumb"><img
+                                    src="http://img.youtube.com/vi/QgVoITRobYs/hqdefault.jpg"></div>
+                            <div data-video="k4GyvUH1J5g" class="video-thumb"><img
+                                    src="http://img.youtube.com/vi/k4GyvUH1J5g/hqdefault.jpg"></div>
+                            <div data-video="9-xWQIgaYlM" class="video-thumb"><img
+                                    src="https://img.youtube.com/vi/9-xWQIgaYlM/hqdefault.jpg"></div>
+                            <div data-video="3PSPuIO2Yno" class="video-thumb"><img
+                                    src="https://img.youtube.com/vi/3PSPuIO2Yno/hqdefault.jpg"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <i class="twitter-sp"
+                style="color:#1DA1F2;font-size: 50px;text-align: center;display: block;margin-top: 30px;"
+                class="fab fa-twitter"></i>
+            <div class="twitter-box">
+                <div id="timeline" class="twitter-sp">
+                    <a class="twitter-timeline" data-height="500px" data-theme="dark"
+                        href="https://twitter.com/KamoSoku_KIC?ref_src=twsrc%5Etfw">Tweets by KamoSoku_KIC</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+        </div>
+        <!--スマホpadding20px-->
+        <script>
+            var tag = document.createElement('script');
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+            var player;
+
+            function onYouTubeIframeAPIReady() {
+                player = new YT.Player('player', {
+                    height: '315',
+                    width: '560',
+                    videoId: 'wxOQGF7CW_Q',
+                    events: {
+                        'onReady': function () {
+                            $(".video-thumb").click(function () {
+                                var $this = $(this);
+                                if (!$this.hasClass("active")) {
+                                    player.loadVideoById($this.attr("data-video"));
+                                    $this.addClass("active").siblings().removeClass("active");
+                                }
+                            });
+                        }
+                    }
+                });
+            }
+        </script>
+        <div class="parallax">
+            <div id="menu" class="contents">
+                <a v-scroll-to="'#about-top'" href="">Biography</a><a v-scroll-to="'#member-top'" href="">Member</a><a
+                    v-scroll-to="'#songs-top'" href="">Discography</a><a href="" target="_blank">Blog</a><a
+                    target="_blank" style="box-shadow: none;"href="https://twitter.com/KamoSoku_KIC"><i class="fab fa-twitter"
+                        　style="color:#1DA1F2;"></i></a><a target="_blank"
+                    href="https://www.youtube.com/channel/UC9LY1HfZ2E3t-w1PZ7gmPNw"style="box-shadow:none;"><i class="fab fa-youtube"
+                        　style="color:#DA1725;"></i></a>
+            </div>
+        </div>
+        <p style="text-align:right;" class="copy">© 2022 kamosoku</p>
+        <script src="scroll.js"></script>
+        <script src="anime.js"></script>
+</body>
