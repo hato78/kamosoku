@@ -27,6 +27,32 @@ body h3 {
   padding: 0;
 }
 
+.return-top {
+  background-color: #54b3d6;
+  border-radius: 50%;
+  text-decoration: none;
+  bottom: 10px;
+  color: #fff;
+  font-size: 10px;
+  height: 50px;
+  line-height: 50px;
+  outline: 0;
+  position: fixed;
+  right: 5px;
+  text-align: center;
+  width: 50px;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+  z-index: 100;
+}
+
+.return-top:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .top-enter-active, .top-leave-active {
   -webkit-transform: translate(0px, 0px);
           transform: translate(0px, 0px);
@@ -323,11 +349,11 @@ header h1 img {
 }
 
 .video-thumb.active:before {
-  background: rgba(25, 209, 255, 0.856);
+  background: rgba(25, 209, 255, 0.7);
 }
 
 .video-thumb:not(.active):hover:before {
-  background: rgba(25, 209, 255, 0.637);
+  background: rgba(25, 209, 255, 0.5);
 }
 
 .video-thumb:after {
@@ -527,9 +553,9 @@ header h1 img {
     margin: auto;
   }
   #member {
-    -webkit-box-pack: center !important;
-        -ms-flex-pack: center !important;
-            justify-content: center !important;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #member #member-box {
     margin-bottom: 20px !important;
