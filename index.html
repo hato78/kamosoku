@@ -14,9 +14,10 @@
 
 <body>
     <div id="app">
+        <a href="#" v-scroll-to="'#top'" class="return-top"><i class="fas fa-chevron-up"></i> TOP</a>
         <header>
             <transition appear name="top">
-                <h1>
+                <h1 id="top">
 
                     <img src="banner.png" alt="鴨川即興演奏同好会かもそく">
                 </h1>
@@ -251,7 +252,7 @@
                         　style="color:#DA1725;"></i></a>
             </div>
         </div>
-        <p style="text-align:right;" class="copy">© 2022 kamosoku</p>
+        <p style="text-align:center;" class="copy">© 2022 kamosoku</p>
         <script src="scroll.js"></script>
         <script src="anime.js"></script>
 </body>
