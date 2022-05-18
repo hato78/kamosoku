@@ -23,6 +23,11 @@ body h3 {
   padding: 0;
 }
 
+.fa-twitter {
+  color: #00acee;
+  text-decoration: none;
+}
+
 .return-top:hover {
   transform: scale(1.1);
 }
@@ -132,6 +137,9 @@ header h1 img {
   width: 416px;
   height: 234px;
   margin-bottom: 14px;
+}
+#about #about-box p {
+  color: #464646;
 }
 #about #timeline {
   float: right;
@@ -513,9 +521,17 @@ header h1 img {
     margin: auto;
   }
 
+  #member-top {
+    text-align: center;
+  }
+
+  #member {
+    justify-content: center;
+  }
   #member #member-box {
     margin-bottom: 20px !important;
     margin: auto;
+    margin-right: 0 !important;
   }
 
   .contents {
